@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "digital";
+  src: url(/assets/fonts/TickingTimebombBB.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container {
+  border: 1px solid grey;
+  width: 70%;
+  height: 40rem;
+  background-color: rgb(211, 215, 216);
+  padding: 2rem;
+}
+
+.clock-container h1 {
+  font-size: 0.7rem;
+  text-align: center;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+.clock-container .screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 80%;
+  margin: 2rem;
+  position: relative;
+  background-color: rgb(193, 209, 209);
+  font-family: "digital";
+}
+
+.clock-container .screen .up {
+  display: flex;
+  font-size: 17rem;
+}
+
+.clock-container .screen .up .seconds {
+  font-size: 6rem;
+  align-items: center;
+  position: absolute;
+  bottom: 14.2rem;
+  right: 5rem;
+}
+
+.clock-container .screen .up .am-pm {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 5rem;
+}
+
+.clock-container .screen .line {
+  height: 4px;
+  width: 95%;
+  background-color: black;
+}
+
+.clock-container .screen .down {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "t d h";
+  width: 90%;
+}
+
+.temps {
+  grid-area: t;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.date::before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  background-color: black;
+  top: 1rem;
+  left: 0;
+}
+
+.date::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  background-color: black;
+  top: 1rem;
+  right: 0;
+}
+
+.humidity {
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fz {
+  display: flex;
+  font-size: 5rem;
+}
+
+.medium {
+  font-size: 1.5rem;
+}
+
+.small {
+  font-size: 2rem;
+}
+
+.clock-container .settings {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background-color: ;
+  margin: 0 auto;
+}
+
+.clock-container .settings .hp {
+  display: flex;
+  gap: 1rem;
+}
+
+.clock-container .settings .hp .hp-line {
+  height: 2rem;
+  width: 0.3rem;
+  background-color: black;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.clock-container .settings .ams {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.clock-container .settings .btns {
+  border: 1px solid rgb(163, 161, 158);
+  background-color: rgb(213, 218, 221);
+  display: flex;
+  align-items: center;
+  padding: 0.1rem 0.3rem;
+  position: relative;
+}
+
+.clock-container .settings .btns .btn {
+  border: 2px solid rgb(100, 97, 97);
+  background-color: transparent;
+  width: 3rem;
+  height: 0.7rem;
+}
+
+.clock-container .settings .btns .btn::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  background-color: rgb(93, 89, 89);
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.clock-container .settings .btns .mode::before {
+  content: "mode";
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  top: -1rem;
+  position: absolute;
+  left: 1rem;
+}
+
+.clock-container .settings .btns .sonoze::before {
+  content: "sonoze";
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  top: -1rem;
+  position: absolute;
+  left: 3.5rem;
+}
+
+.clock-container .settings .btns .alarm::before {
+  content: "alarm";
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  top: -1rem;
+  position: absolute;
+  right: 1rem;
+}
